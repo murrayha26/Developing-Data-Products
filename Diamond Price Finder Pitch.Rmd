@@ -1,0 +1,54 @@
+---
+title: 'Developing Data Products Course Project: Shiny App Pitch'
+author: "Howard Murray"
+date: "2024-11-01"
+output: ioslides_presentation
+---
+
+## Project Objective
+
+This presentation serves as the second part of the the final assignment in the Coursera Developing Data Products Course. This is the pitch for the application that I created using the **shiny* package in R. The goal of the final project was: 
+
+1. Write code for a Shiny application and deploy it to Rstudio's shiny server. 
+2. See app at  <https://h-town1906.shinyapps.io/Diamond_Price_Finder/>. 
+3. Share code **server.R** and **ui.R** code on github. 
+4. Code can be viewed at <https://github.com/murrayha26/Developing-Data-Products>. 
+5. Create a 5-page html presentation to pitch my Shiny app and post it to github or Rpubs. Code for presentation is in the [link](https://github.com/murrayha26/Developing-Data-Products) 
+
+## The Diamond Price Finder
+
+We can all agree that buying a diamond is an important decision. Diamonds are rare, expensive, and they make a statement. 
+
+The diamond you purchase says as much about YOU, the buyer, as it does the person or occasion it was purchased for. 
+
+Whether it's proposing to that special someone, upgrading a fine piece of jewelry, or making an investment, you're about to make a big decision about something most of us have very little experience in. YIKES! 
+
+When making a big money decision wouldn't it be great to be able to rely on someone other than a salesperson working for a commission? Wouldn't it be great if you had access to reliable information to help you make an informed decision?
+
+Thanks to the **DIAMOND PRICE FINDER** now you do!
+
+## What is the Diamond Price Finder? 
+
+It's an easy to use app that allows the user to quickly find the estimated price of a diamond. 
+How you ask? It's as easy as entering knowing your **4 C's**. 
+The user simply: 
+
+1. Uses our simple slider widget to enter the **Carat weight**. 
+2. Selects the **Cut** via the drop-down box. (Cut goes from Fair to Ideal.) 
+3. Selects the **Color**. (Range from D (Colorless) to J (Slight tint) 
+4. Selects the **Clarity** (Clarity varies from SI2 - Slightly Included 2 to VVS1 - Very Very Slightly Included 1) 
+
+With these inputs the **Diamond Price Finder** instantly gives you a *reliable estimated price*.
+
+
+## How does it work?
+
+Well we can't give you all of our secrets can we? We can tell you that the prices generated are based on data science! 
+Our experts have researched the prices of over fifty thousand diamonds of various sizes and qualities and applied a unique statistical model to derive a *reliable estimated price*.
+
+```{r echo=FALSE}
+library(ggplot2)
+
+str(diamonds)
+```
+
