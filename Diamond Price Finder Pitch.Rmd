@@ -7,11 +7,11 @@ output: ioslides_presentation
 
 ## Project Objective
 
-This presentation serves as the second part of the the final assignment in the Coursera Developing Data Products Course. This is the pitch for the application that I created using the **shiny* package in R. The goal of the final project was: 
+This presentation serves as the second part of the the final assignment in the Coursera Developing Data Products Course. This is the pitch for the application that I created using the **shiny** package in R. The goal of the final project was: 
 
 1. Write code for a Shiny application and deploy it to Rstudio's shiny server. 
 2. See app at  <https://h-town1906.shinyapps.io/Diamond_Price_Finder/>. 
-3. Share code **server.R** and **ui.R** code on github. 
+3. Share **server.R** and **ui.R** code on github. 
 4. Code can be viewed at <https://github.com/murrayha26/Developing-Data-Products>. 
 5. Create a 5-page html presentation to pitch my Shiny app and post it to github or Rpubs. Code for presentation is in the [link](https://github.com/murrayha26/Developing-Data-Products) 
 
@@ -30,7 +30,7 @@ Thanks to the **DIAMOND PRICE FINDER** now you do!
 ## What is the Diamond Price Finder? 
 
 It's an easy to use app that allows the user to quickly find the estimated price of a diamond. 
-How you ask? It's as easy as entering knowing your **4 C's**. 
+How you ask? It's as easy as knowing your **4 C's**. 
 The user simply: 
 
 1. Uses our simple slider widget to enter the **Carat weight**. 
