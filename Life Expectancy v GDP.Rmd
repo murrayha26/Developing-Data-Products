@@ -1,0 +1,32 @@
+---
+title: "Life Expectancy vs. GDP"
+author: "Howard Murray"
+date: "October 28, 2024"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Week 3 Programming Assignment 
+
+```{r, echo=FALSE, message=FALSE, fig.align="center"}
+
+library(gapminder)
+library(ggplot2)
+library(plotly)
+
+p <- gapminder %>% 
+  filter(continent %in% c("Asia", "Europe", "Africa")) %>% 
+  filter(gdpPercap < 30000) %>% 
+  ggplot(aes(x = log(gdpPercap), y = lifeExp, size = pop, color = year)) +
+  geom_point() +
+  facet_wrap(~continent) +
+  labs(title = "Life Expectancy vs. log(GDP per Capita)",
+       x = "log(GDP per Capita)",
+       y = "Life Expectancy")
+
+ggplotly(p)
+ 
+```

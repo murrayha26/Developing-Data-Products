@@ -1,0 +1,44 @@
+---
+title: "Ten Places to Visit in St. Louis, MO"
+author: "Howard Murray"
+date: "2024-10-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## October 23, 2024 
+
+This is a map highlighting 10 great tourist spots to visit in St. Louis, Missouri. 
+
+```{r, echo= FALSE}
+library(leaflet)
+
+# Create data frame of marker locations
+Loc.df <- data.frame(lat = c(38.6350915,38.63833725,38.63705755,38.64518385,38.62572735,38.6225541,38.6133951,
+                             38.6246077,38.6394114,38.67046285),
+                     lng = c(-90.2907432,-90.28467073,-90.21494823,-90.28583822,-90.18934774,-90.19392053,-90.25938329,
+                             -90.18497089,-90.2944862,-90.20852517))
+
+# Popup information - URLs for the tourist locations depicted on the map
+STLsites <- c(
+  "<a href='https://www.stlzoo.org/'>St. Louis Zoo</a>",
+  "<a href='https://www.forestparkforever.org/'>Forest Park</a>",
+  "<a href='https://www.mostateparks.com/park/scott-joplin-house-state-historic-site/'>Scott Joplin House</a>",
+  "<a href='https://mohistory.org/museum/'>Missouri History Museum</a>",
+  "<a href='https://www.gatewayarch.com/experience/old-courthouse/'>Old Courthouse</a>",
+  "<a href='http://stlouis.cardinals.mlb.com/'>Busch Stadium</a>",
+  "<a href='https://www.missouribotanicalgarden.org/'>Missouri Botanical Garden</a>",
+  "<a href='https://www.gatewayarch.com/'>The Gateway Arch</a>",
+  "<a href='https://www.slam.org/'>St. Louis Art Museum</a>",
+  "<a href='https://www.stlouis-mo.gov/government/departments/planning/cultural-resources/city-landmarks/Grand-Avenue-Water-Tower.cfm/'>Grand Avenue Water Tower</a>"
+)
+
+Loc.df %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(popup = STLsites)
+
+```
